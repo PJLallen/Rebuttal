@@ -1,11 +1,22 @@
 # Rebuttal
 
-Furthermore, the ablation studies in the Appendix are questionable. For instance, they ablate the effect of "high-order modeling" by replacing their attention-based blocks with ResNets. I don't see how this is a careful ablation study, why not replace it with regular attention without the proposed modeling trick?
-此外，附录中的消融研究也值得商榷。例如，他们用ResNets替换了基于注意力的模块，从而消除了“高阶建模”的效果。我不认为这是一项仔细的消融研究，为什么不使用常规注意力替换它，而不用所提出的建模技巧呢？
+Reviewer4 Q2:
+2. 比较方法不够有力。许多比较方法无法恢复该领域的强基准。Fourmer和RAMiT（请注意，该方法未在CVPR24上发布，而是在CVPR workshop24上发布）的模型大小不到1M。Histoformer用于多合一恶劣天气恢复。为什么要将MambaIR压缩到如此小的尺寸。建议与更先进的方法[4,5,6]进行比较。
 
-| Modules        | PSNR ↑   | SSIM ↑   |
-|----------------|----------|----------|
-| ResNet         | 17.7953  | 0.5826   |
-| Self-attention | —        | —        |   
-| Ours           | **18.6708** | **0.6587** |
-
+| Tasks       | Methods         | PSNR ↑   | SSIM ↑   | LPIPS ↓   |
+|-------------|------------------|----------|----------|-----------|
+| Desmoking   | MambaIR          | 18.5762  | 0.6544   | 0.4097    |
+|             | [4] AST          | **18.6852** | 0.6304   | 0.4028    |
+|             | [5] X-Restormer  | 17.3710  | 0.6397   | 0.4064    |
+|             | [6] SFHformer    | 18.3078  | 0.6476   | 0.4088    |
+|             | Ours             | 18.6708  | **0.6587** | **0.3864** |
+| Defogging   | MambaIR          | 18.2131  | 0.6294   | 0.4863    |
+|             | [4] AST          | 18.1456  | 0.5968   | 0.4765    |
+|             | [5] X-Restormer  | 18.2589  | 0.6147   | 0.4891    |
+|             | [6] SFHformer    | 18.0930  | 0.6145   | 0.4862    |
+|             | Ours             | **18.2470** | **0.6308** | **0.5014** |
+| Desplashing | MambaIR          | 21.9424  | 0.7228   | 0.3189    |
+|             | [4] AST          | 21.8341  | 0.7099   | **0.2957** |
+|             | [5] X-Restormer  | 21.8371  | 0.7217   | 0.3186    |
+|             | [6] SFHformer    | 21.8908  | 0.7236   | 0.3004    |
+|             | Ours             | **21.9444** | **0.7239** | 0.3036    |

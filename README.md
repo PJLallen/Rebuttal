@@ -9,6 +9,6 @@
 
 ## Regarding SAM:
 <div align=center>
-<img src="Rebuttal-SAM.png" height=300 width=750>
+<img src="SAM-Results.png" height=300 width=750>
 </div>
 

@@ -8,7 +8,4 @@
 ---
 
 ## Regarding SAM:
-<div align=center>
-<img src="SAM-Results.png" height=300 width=750>
-</div>
-
+![Rebuttal](/SAM-Results.png)

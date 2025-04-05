@@ -8,6 +8,6 @@
 ---
 
 ## Regarding SAM:
-![Rebuttal](/Rebuttal_SAM.png)
+![Rebuttal](/Rebuttal-SAM.png)
 
 

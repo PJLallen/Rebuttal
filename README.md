@@ -1,22 +1,13 @@
 # Rebuttal
 
-Reviewer4 Q2:
-2. 比较方法不够有力。许多比较方法无法恢复该领域的强基准。Fourmer和RAMiT（请注意，该方法未在CVPR24上发布，而是在CVPR workshop24上发布）的模型大小不到1M。Histoformer用于多合一恶劣天气恢复。为什么要将MambaIR压缩到如此小的尺寸。建议与更先进的方法[4,5,6]进行比较。
+## Regarding Alignment:
+<div align=center>
+<img src="Rebuttal-Alignment.png" height=360 width=900>
+</div>
 
-| Tasks       | Methods         | PSNR ↑   | SSIM ↑   | LPIPS ↓   |
-|-------------|------------------|----------|----------|-----------|
-| Desmoking   | MambaIR          | 18.5762  | 0.6544   | 0.4097    |
-|             | [4] AST          | **18.6852** | 0.6304   | 0.4028    |
-|             | [5] X-Restormer  | 17.3710  | 0.6397   | 0.4064    |
-|             | [6] SFHformer    | 18.3078  | 0.6476   | 0.4088    |
-|             | Ours             | 18.6708  | **0.6587** | **0.3864** |
-| Defogging   | MambaIR          | 18.2131  | 0.6294   | 0.4863    |
-|             | [4] AST          | 18.1456  | 0.5968   | 0.4765    |
-|             | [5] X-Restormer  | 18.2589  | 0.6147   | 0.4891    |
-|             | [6] SFHformer    | 18.0930  | 0.6145   | 0.4862    |
-|             | Ours             | **18.2470** | **0.6308** | **0.5014** |
-| Desplashing | MambaIR          | 21.9424  | 0.7228   | 0.3189    |
-|             | [4] AST          | 21.8341  | 0.7099   | **0.2957** |
-|             | [5] X-Restormer  | 21.8371  | 0.7217   | 0.3186    |
-|             | [6] SFHformer    | 21.8908  | 0.7236   | 0.3004    |
-|             | Ours             | **21.9444** | **0.7239** | 0.3036    |
+---
+
+## Regarding SAM:
+![Rebuttal](/Rebuttal_SAM.png)
+
+
